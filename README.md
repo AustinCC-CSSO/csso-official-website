@@ -1,3 +1,6 @@
 # Getting Started
 
-clone repository - npm install - npm start
+first clone the repository
+open terminal and navigate to folder
+enter "npm install" to download dependencies
+enter "npm start" to start development server
