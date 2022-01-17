@@ -62,7 +62,15 @@ export const ProfilesCard = styled.div`
 export const ProfilesIcon = styled.img`
   height: 160px;
   width: 160px;
+  border-radius: 50%;
   margin-bottom: 10px;
+  border: solid black 2px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  @media screen and (max-width: 480px) {
+    height: 140px;
+    width: 140px;
+    margin-bottom: 30px;
+  }
 `;
 
 export const ProfilesH1 = styled.h1`
