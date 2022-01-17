@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../ButtonElement";
+import { Button, SignUpBtn } from "../ButtonElement";
 import {
   InfoContainer,
   InfoWrapper,
@@ -16,6 +16,7 @@ import {
 } from "./InfoElements";
 
 const InfoSection = ({
+  signup,
   lightBg,
   id,
   imgStart,
@@ -32,6 +33,36 @@ const InfoSection = ({
   dark,
   dark2,
 }) => {
+  const SmoothButton = (
+    <Button
+      to="signup"
+      smooth={true}
+      duration={500}
+      spy={true}
+      exact="true"
+      offset={-80}
+      primary={primary ? 1 : 0}
+      dark={dark ? 1 : 0}
+      dark2={dark2 ? 1 : 0}
+    >
+      {buttonLabel}
+    </Button>
+  );
+  const SignupButton = (
+    <SignUpBtn
+      to={{
+        pathname:
+          "https://austincc.campuslabs.com/engage/organization/acc_csso",
+      }}
+      target="_blank"
+      primary={primary ? 1 : 0}
+      dark={dark ? 1 : 0}
+      dark2={dark2 ? 1 : 0}
+    >
+      {buttonLabel}
+    </SignUpBtn>
+  );
+  const ButtonDisplay = signup ? SignupButton : SmoothButton;
   return (
     <React.Fragment>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -42,21 +73,7 @@ const InfoSection = ({
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
-                <BtnWrap>
-                  <Button
-                    to="signup"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
-                  >
-                    {buttonLabel}
-                  </Button>
-                </BtnWrap>
+                <BtnWrap>{ButtonDisplay}</BtnWrap>
               </TextWrapper>
             </Column1>
             <Column2>

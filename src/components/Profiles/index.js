@@ -1,6 +1,7 @@
 import React from "react";
 import Icon1 from "../../images/profilepic.svg";
-
+import { Nathan } from "./Data";
+import ProfileCard from "./ProfileCard";
 import {
   ProfilesContainer,
   ProfilesH1,
@@ -16,15 +17,15 @@ const Profiles = () => {
       <ProfilesContainer id="profiles">
         <ProfilesH1>Meet Our Officers</ProfilesH1>
         <ProfilesWrapper>
-          <ProfilesCard>
-            <ProfilesIcon src={Icon1} />
-            <ProfilesH2>Nathan Lu</ProfilesH2>
-            <ProfilesP>President</ProfilesP>
-          </ProfilesCard>
+          <ProfileCard
+            fullName={Nathan.fullName}
+            profPic={Nathan.profPic}
+            position={Nathan.position}
+          />
           <ProfilesCard>
             <ProfilesIcon src={Icon1} />
             <ProfilesH2>Malik Rawashdeh</ProfilesH2>
-            <ProfilesP>Development Officer</ProfilesP>
+            <ProfilesP>Vice President</ProfilesP>
           </ProfilesCard>
           <ProfilesCard>
             <ProfilesIcon src={Icon1} />

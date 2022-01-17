@@ -97,7 +97,7 @@ const Navbar = ({ toggle }) => {
             </NavMenu>
             <NavBtn>
               <NavBtnLink
-                to={{ pathname: "https://discord.com" }}
+                to={{ pathname: "https://discord.gg/RGGzSUDFDN" }}
                 target="_blank"
               >
                 Discord
