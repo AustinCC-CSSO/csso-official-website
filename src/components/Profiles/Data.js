@@ -1,5 +1,3 @@
-import defaultPfp from "../../images/profilepic.svg";
-
 export const profilesData = [
   {
     profPic: require("./ProfileImages/nathanPfp"),
